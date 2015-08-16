@@ -1,0 +1,29 @@
+% !Rnw weave = knitr
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+
+\title{LaTeX for loop examples with Knitr}
+\author{Alice Toll}
+\date{\today}
+
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+
+\maketitle
+
+Collect results from the template for each i and write them back later.
+
+This code comes from Yihui Xie \url{https://gist.github.com/yihui/3145751#file-readme-md}
+
+<<run-all, include=FALSE>>=
+library(knitr)
+out = NULL
+for (i in 1:3) {
+  out = c(out, knit_child('forloopKnitr_child.rnw'))
+}
+@
+
+\Sexpr{paste(out, collapse = '\n')}
+
+\end{document}
