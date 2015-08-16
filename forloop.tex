@@ -1,0 +1,115 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{pgffor}
+\usepackage{pgfmath}
+\usepackage{arrayjob}
+\usepackage{hyperref}
+
+\setlength\parindent{0pt}
+
+\title{LaTeX for loop examples}
+\author{Alice Toll}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\noindent Reference: \url{https://stuff.mit.edu/afs/athena/contrib/tex-contrib/beamer/pgf-1.01/doc/generic/pgf/version-for-tex4ht/en/pgfmanualse15.html}
+
+\begin{verbatim}
+\foreach \x in {1,2,3,0}{[\x]}
+\end{verbatim}
+\foreach \x in {1,2,3,0}{[\x]}
+\bigskip
+
+\begin{verbatim}
+\foreach \x in {1,2,...,6} {\x, }
+\end{verbatim}
+\foreach \x in {1,2,...,6} {\x, }
+\bigskip
+
+\begin{verbatim}
+\foreach \x in {1,2,3,...,6} {\x, }
+\end{verbatim}
+\foreach \x in {1,2,3,...,6} {\x, }
+\bigskip
+
+\begin{verbatim}
+\foreach \x in {1,3,...,11} {\x, }
+\end{verbatim}
+\foreach \x in {1,3,...,11} {\x, }
+\bigskip
+
+\begin{verbatim}
+\foreach \x in {1,3,...,10} {\x, }
+\end{verbatim}
+\foreach \x in {1,3,...,10} {\x, }
+
+\begin{center}
+\line(1,0){250}
+\end{center}
+
+Reference: \url{http://tex.stackexchange.com/questions/45040/pgf-tikz-how-to-store-strings-in-array} \\
+
+\verb|\usepackage{pgfmath}|
+\begin{verbatim}
+\def\names{{"Jane", "Job", "Ben", "Alice"}}
+\foreach \i in {0, ..., 3} {
+	Name \i: \pgfmathparse{\names[\i]}\pgfmathresult \\
+	}
+\end{verbatim}
+\def\names{{"Jane", "Job", "Ben", "Alice"}}
+\foreach \i in {0, ..., 3} {
+	Name \i: \pgfmathparse{\names[\i]}\pgfmathresult \\
+	}
+
+\verb|\usepackage{arrayjob}|
+\begin{verbatim}
+\newarray\names
+\readarray{names}{Jane&Job&Ben&Alice}
+\foreach \i in {1, 2, 3, 4} {
+	\names(\i) \par
+	}
+\end{verbatim}
+\newarray\names
+\readarray{names}{Jane&Job&Ben&Alice}
+\foreach \i in {1, 2, 3, 4} {
+	\names(\i) \par
+	}
+
+\begin{center}
+\line(1,0){250}
+\end{center}
+
+\foreach \name in {Jane, Job, Ben, Alice}
+{
+\section{About \name}
+This section is about \name.
+}
+
+\begin{center}
+\line(1,0){250}
+\end{center}
+
+%\newarray\names
+%\readarray{names}{Jane&Job&Ben&Alice}
+%\newarray\genders
+%\readarray{genders}{female&male&male&female}
+%\foreach \i in {1, 2, 3, 4} {
+%	\section{About \protect{\names(\i)} }
+%	This section is about \names(\i). \names(\i) is \genders(\i).
+%	}
+
+
+
+\def\names{{"Jane", "Job", "Ben", "Alice"}}
+\def\genders{{"female", "male", "male", "female"}}
+\foreach \i in {0, ..., 3} {
+	\section{About \pgfmathparse{\names[\i]}\pgfmathresult }
+	This section is about \pgfmathparse{\names[\i]}\pgfmathresult .
+	\pgfmathparse{\names[\i]}\pgfmathresult is a \pgfmathparse{\genders[\i]}\pgfmathresult 
+	}
+
+
+
+\end{document}
