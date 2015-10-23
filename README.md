@@ -13,4 +13,4 @@ LaTeX for loops
 
 Print multiple Beamer slides on one page
   - Toll_Presentation.tex is original presentation
-  - Handout.tex takes Toll_Presentation.tex as input and
+  - Handout.tex takes Toll_Presentation.tex as input and makes new pdf with 6 slides per page
