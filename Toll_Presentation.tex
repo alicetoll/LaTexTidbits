@@ -1,0 +1,359 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[xcolor=dvipsnames]{beamer}
+% \documentclass[handout]{beamer}
+
+\mode<presentation> {
+
+% \definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+
+\definecolor{aliceblue}{rgb}{0.36, 0.40, 0.66}
+
+\usecolortheme[named=aliceblue]{structure}
+%\setbeamercolor{frametitle}{fg=Brown,bg=Brown!20}
+%\setbeamercolor{subsection in sidebar}{fg=brown}
+\setbeamertemplate{items}[circle]
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}		%%
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+\usetheme{Goettingen}		%% right hand outline
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}		%%
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}		%%
+%\usetheme{PaloAlto}
+ %\usetheme{Pittsburgh}		%% Minimalist
+%\usetheme{Rochester}		%% sr sem?
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+
+
+
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{4 on 1}[a4paper,border shrink=5mm,landscape]
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[SAP]{Statistical Analysis Plan \\~\\
+\large Jessica Thomas, MD PhD\\
+\normalsize Department of Pathology, Microbiology, and Immunology \\~\\
+ October 1, 2015}
+%\title[Short title]{Full Title of the Talk} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Alice Toll} % Your name
+%\institute[UCLA] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+%{
+%University of California \\ % Your institution for the title page
+%\medskip
+%\textit{john@smith.com} % Your email address
+%}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+%
+%\begin{frame}
+%\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+%\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+%\end{frame}
+
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Outline}
+	\tableofcontents
+\end{frame}
+
+
+%------------------------------------------------
+
+\section{Introduction}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Introduction}
+\begin{itemize}
+ \item Cytomegalovirus (CMV)
+        \begin{itemize}
+        \item Weakened immune systems
+        \item Organ transplant
+        \end{itemize}
+\item Testing
+        \begin{itemize}
+        \item In-house assay
+        \item Relative to a standard by institution
+        \item Cannot compare results from two institutions
+        \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+
+\section{Study Objectives and Endpoints}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Study Objective}
+\begin{itemize}
+\item Pilot study
+\item Which alternative lab tests are most comparable to the standard?
+\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Endpoints}
+Outcome: CMV viral loads (copies per mL)
+\begin{itemize}
+\item Whole blood realtime PCR (gold-standard)
+\item Droplet digital PCR
+	\begin{itemize}
+	\item Whole blood
+	\item Plasma
+	\end{itemize}
+\item New FDA assay
+	\begin{itemize}
+	\item Whole blood
+	\item Plasma
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+
+
+\section{Study Methods}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Inclusion-Exclusion Criteria and General Study Design}
+\begin{itemize}
+\item 25 immunosuppressed patients
+\item Recently received organ transplant
+\item Exhibiting infections disease symptoms \\ (fever, pneumonia, ulcers, hepatits)
+\item No need for healthy ``control'' group
+\item De-identified lab samples analyzed by a single technician
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Study Variables}
+\begin{itemize}
+\item Sex
+\item Age
+\item Race 
+%	\begin{itemize}
+%		\item White
+%		\item Black 
+%		\item Asian
+%		\item American Indian or Alaska Native
+%		\item Native Hawaiian or Other Pacific Islander
+%	\end{itemize}
+\item Transplant organ
+\item Body temperature
+\item Blood pressure
+\item Days since transplant
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\section{Data Analysis}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Data Analysis}
+\begin{itemize}
+\item Descriptive statistics
+	\begin{itemize}
+	\item Continuous: mean, standard deviation, range
+	\item Categorical: frequencies by group
+	\end{itemize}
+\item Scatterplots
+	\begin{itemize}
+	\item Lab test results vs Gold standard
+	\item One point per individual
+	\item Correlation
+	\end{itemize}
+%\item Paired $t$-test
+%	\begin{itemize}
+%	\item Compare test results
+%	\item Cannot control for confounders
+%	\item $H_{0}$: $\bar{X}_{A} - \bar{X}_{B} = 0$
+%	\item Miscalibration 
+%	\end{itemize}
+\item Regression
+	\begin{itemize}
+	\item Dependent variable: New test
+	\item Independent variable: Gold standard
+	\item Covariates
+	\item $H_{0}$: $\beta = 0$
+	\item Compare $R^2$
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+
+\section{Reporting Results}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Reporting Results}
+
+%% Please add the following required packages to your document preamble:
+%% \usepackage{booktabs}
+%\begin{table}[H]
+%\centering
+%\caption{Analysis Results}
+%\label{my-label}
+%\begin{tabular}{@{}lllll@{}}
+%\toprule
+%                        & Correlation & Paired t-test & Regression coeffieict t-test & Regression $R^2$ \\ \midrule
+%Droplet digital, whole  &             &               &                              &                  \\
+%Droplet digital, plasma &             &               &                              &                  \\
+%FDA, whole              &             &               &                              &                  \\
+%FDA, plasma             &             &               &                              &                  \\ \bottomrule
+%\end{tabular}
+%\end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\tiny
+
+\begin{table}[H]
+\centering
+\caption{Analysis Results}
+\label{my-label}
+\begin{tabular}{@{}lllll@{}}
+\toprule
+                        & Correlation & Regression coeffieict t-test & Regression $R^2$ \\ \midrule
+Droplet digital, whole  &             &                               &                  \\
+Droplet digital, plasma &             &                               &                  \\
+FDA, whole              &             &                             &                  \\
+FDA, plasma             &             &                              &                  \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\normalfont
+
+\end{frame}
+
+
+%------------------------------------------------
+
+\section{Multiple Testing}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Multiple Testing}
+\begin{itemize}
+\item 4 $t$-tests from regressions
+\item Not concerned, pilot study
+\item Interested in effect sizes and standard deviations for power calculation
+\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+
+\section{Contingency Plan}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Contingency Plan}
+\begin{itemize}
+\item Collect extra blood, can repeat lab tests
+\item If one lab test is invalid, continue analysis on remaining labs
+\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

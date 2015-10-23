@@ -1,0 +1,23 @@
+%\documentclass[letterpaper]{article}
+%\usepackage{pdfpages}
+% 
+%\begin{document}
+%\includepdf[pages=1-last,nup=2x3,landscape=false,frame=true,
+%            noautoscale=true,scale=0.6,delta=0mm 5mm]{ClinicPresentation.pdf}
+%\end{document}
+
+
+\documentclass[letterpaper]{article}
+\usepackage{pdfpages}
+        \includepdfset{pages=-,nup=2x3,frame,noautoscale=false,delta=5mm 5mm,pagecommand={\thispagestyle{plain}}}% adjust the pagestyle etc. as desired
+
+% \geometry{vscale=.75,hscale=.925}% if you are not using A4, you might need to adjust this to get things looking right
+\usepackage{parskip}
+
+\pagenumbering{gobble}
+
+\begin{document}
+
+\includepdf[scale=.9]{Toll_Presentation.pdf}% beamer presentation created in handout mode (to flatten slides). Also consider using a black and white theme if printing or copying greyscale
+
+\end{document}
